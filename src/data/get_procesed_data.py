@@ -73,7 +73,7 @@ def reorder_cols(df):
 
 def write_data(df):
     processed_data_path = os.path.join(os.path.pardir, 'data', 'processed')
-    train_path = os.path.join(processed_data_path, 'train_csv')
+    train_path = os.path.join(processed_data_path, 'train.csv')
     test_path = os.path.join(processed_data_path, 'test.csv')
     df[df.Survived != -888].to_csv(train_path)
     cols = [col for col in df.columns if col != 'Survived']
